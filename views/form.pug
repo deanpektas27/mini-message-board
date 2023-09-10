@@ -1,0 +1,19 @@
+extends layout
+
+block content 
+    .modal-dialog
+        .modal-content  
+            .modal-header
+            h1= 'New Message'
+
+        .modal-body
+            form(method='POST'
+            action='/new'
+            )
+                div.form-group
+                    label(for='name') Name: 
+                    input#name.form-control(type='text', name="userName")
+                div.form-group   
+                    label(for='msg') Message: 
+                    input#name.form-control(type='text', name="messageText")
+                button(type="submit") Submit
